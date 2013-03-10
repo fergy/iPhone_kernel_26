@@ -1,0 +1,25 @@
+menu "Apple iPhone platform type"
+	depends on MACH_APPLE_IPHONE
+
+choice
+	prompt "Model"
+	default IPHONE_2G
+
+config IPHONE_2G
+	bool "iPhone 2G"
+	help
+	  Select this option if the device is an iPhone 2G.
+
+config IPHONE_3G
+	bool "iPhone 3G"
+	help
+	  Select this option if the device is an iPhone 3G.
+
+config IPODTOUCH_1G
+	bool "iPod touch 1G"
+	help
+	  Select this option if the device is an iPod touch 1G.
+
+endchoice
+
+endmenu
