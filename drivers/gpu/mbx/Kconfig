@@ -1,0 +1,6 @@
+config MBX
+	tristate "PowerVR MBX Services"
+	default y
+	help
+	    This enables Imagination Tech. PowerVR MBX-Lite 3D graphics
+		accellerator support on Apple iPhone 2G/3G and 3GS
