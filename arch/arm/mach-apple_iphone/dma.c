@@ -10,7 +10,7 @@
 #include <linux/platform_device.h>
 #include <linux/delay.h>
 #include <linux/sched.h>
-
+#include <asm/hardware/pl080.h>
 #include <mach/hardware.h>
 #include <mach/iphone-dma.h>
 #include <mach/dma.h>
@@ -559,8 +559,14 @@ static struct platform_driver iphone_dma_driver = {
 
 static int __init iphone_dma_modinit(void)
 {
+//TODO: enable PL080 DMA Controller -> AppleARMPL080DMAC
+//	void __iomem *regs;
+//	regs = ioremap(base, 0x200);
 	memset(DMALists, 0, sizeof(DMALists));
 	return platform_driver_register(&iphone_dma_driver);
+	/* for the moment, permanently enable the controller */
+//	writel(PL080_CONFIG_ENABLE, regs + PL080_CONFIG);
+//	printk(KERN_INFO "PL080: IRQ %d, at %p\n", irq, regs);
 }
 
 static void __exit iphone_dma_modexit(void)

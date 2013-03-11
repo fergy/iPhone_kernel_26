@@ -4,8 +4,8 @@
 #include <mach/hardware.h>
 
 // Device
-#define I2C0 IO_ADDRESS(0x3C600000)
-#define I2C1 IO_ADDRESS(0x3C900000)
+#define I2C0 IO_ADDRESS(0x3C600000) //audio0, WM, WM-buttons HID, WM output, LIS, TSL
+#define I2C1 IO_ADDRESS(0x3C900000) //camera
 
 // Registers
 #define IICCON 0x0

@@ -3,7 +3,7 @@
 
 #include <mach/hardware.h>
 
-// This thing appears to be a PL080
+// VIC PL080 DMA Controller
 
 // Device
 #define DMAC0_PA 0x38200000
@@ -12,13 +12,23 @@
 #define DMAC1 IO_ADDRESS(DMAC1_PA)
 
 // Registers
-#define DMACIntStatus 0
-#define DMACIntTCStatus 0x4
-#define DMACIntTCClear 0x8
-#define DMACConfiguration 0x30
-#define DMAC0SrcAddress 0x100
-#define DMAC0DestAddress 0x104
-#define DMAC0LLI 0x108
+#define DMACIntStatus		0x000
+#define DMACIntTCStatus		0x004
+#define DMACIntTCClear		0x008
+#define DMACIntErrorStatus	0x00C
+#define DMACIntErrClr		0x010
+#define DMACRawIntTCStatus	0x014
+#define DMACRawIntErrorStatus	0x018
+#define DMACEnbldChns		0x01C
+#define DMACSoftBReq		0x020
+#define DMACSoftSReq		0x024
+#define DMACSoftLBReq		0x028
+#define DMACSiftLSReq		0x02C
+#define DMACConfiguration	0x030
+#define DMACSync		0x34
+#define DMAC0SrcAddress		0x100
+#define DMAC0DestAddress	0x104
+#define DMAC0LLI		0x108
 #define DMAC0Control0 0x10C
 #define DMAC0Configuration 0x110
 

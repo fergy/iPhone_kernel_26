@@ -25,11 +25,11 @@
 #define UART IO_ADDRESS(0x3CC00000)
 
 // Registers
-#define UART0 0x0
-#define UART1 0x4000
+#define UART0 0x0 //S5L8900XSerial
+#define UART1 0x4000 //Baseband
 #define UART2 0x8000
-#define UART3 0xC000
-#define UART4 0x10000
+#define UART3 0xC000 //Bluetooth
+#define UART4 0x10000 //Debug
 
 #define UART_ULCON 0x0
 #define UART_UCON 0x4
@@ -88,12 +88,16 @@
 
 #define UART_UFSTAT_TXFIFO_FULL (0x1 << 9)
 #define UART_UFSTAT_RXFIFO_FULL (0x1 << 8)
+#define UART_UFSTAT_TXCOUNT_SHIFT 4
+#define UART_UFSTAT_TXCOUNT_MASK (0xF << UART_UFSTAT_TXCOUNT_SHIFT)
 #define UART_UFSTAT_RXCOUNT_MASK 0xF
 
 #define UART_5BITS 0
 #define UART_6BITS 1
 #define UART_7BITS 2
 #define UART_8BITS 3
+
+#define UART_ULCON_UNKN 0x7
 
 #endif
 

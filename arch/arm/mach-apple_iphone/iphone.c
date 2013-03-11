@@ -220,7 +220,7 @@ static struct i2c_board_info __initdata iphone_i2c0[] = {
 		I2C_BOARD_INFO("lis331dl", 0x3a),
 	},
 	{
-		I2C_BOARD_INFO("pcf50633", 0xe6),
+		I2C_BOARD_INFO("pcf50635", 0xe6),
 		.irq = IPHONE_GPIO_IRQS + 0x55,
 		.platform_data = &pcf50633_pdata,
 	},
