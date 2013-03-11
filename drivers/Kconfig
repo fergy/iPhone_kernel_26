@@ -80,6 +80,8 @@ source "sound/Kconfig"
 
 source "drivers/hid/Kconfig"
 
+source "drivers/gpu/mbx/Kconfig"
+
 source "drivers/usb/Kconfig"
 
 source "drivers/uwb/Kconfig"
